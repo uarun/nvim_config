@@ -39,7 +39,13 @@ local plugins = {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
+
+    'hrsh7th/nvim-cmp',                      -- Completion plugin
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-vsnip',                     -- Snippets
+    'hrsh7th/vim-vsnip',
   },
+
 }
 
 local opts = {}
