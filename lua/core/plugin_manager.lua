@@ -22,12 +22,24 @@ local plugins = {
   "nvim-tree/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
 
+  -- Git
+  "lewis6991/gitsigns.nvim",
+
+  -- Syntax Highlighting
   "nvim-treesitter/nvim-treesitter",
   {
-    'nvim-telescope/telescope.nvim', 
+    'nvim-telescope/telescope.nvim',
     tag = '0.1.1',
     dependencies = { 'nvim-lua/plenary.nvim' }
-  }
+  },
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+
+  -- LSP related plugins
+  {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
+  },
 }
 
 local opts = {}
