@@ -57,9 +57,27 @@ cmp.setup {
     { name = 'nvim_lsp' },
     { name = 'vsnip' },
   }, {
-      { name = 'buffer' },
+    { name = 'buffer' },
   })
 }
+
+-- Use buffer source for `/` and `?`
+cmp.setup.cmdline({ '/', '?' }, {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+-- Use cmdline & path source for ':'
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    { name = 'cmdline' }
+  })
+})
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.lua_ls.setup {

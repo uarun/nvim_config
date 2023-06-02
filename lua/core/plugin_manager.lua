@@ -42,6 +42,9 @@ local plugins = {
 
     'hrsh7th/nvim-cmp',                      -- Completion plugin
     'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
     'hrsh7th/cmp-vsnip',                     -- Snippets
     'hrsh7th/vim-vsnip',
   },
