@@ -1,6 +1,6 @@
 # My Neovim Configuration
 
-Neovim configuration using Lazy.nvim as the plugin manager
+Neovim configuration using Lazy as the plugin manager
 
 ## Plugins
 
@@ -9,7 +9,7 @@ Neovim configuration using Lazy.nvim as the plugin manager
   - nvim-treesitter
   - telescope
 
-[Full Plugin List w/ Dependencies](https://github.com/uarun/nvim_config/blob/master/lua/core/plugin_manager.lua#L14-L31)
+[Full Plugin List w/ Dependencies](https://github.com/uarun/nvim_config/blob/master/lua/core/plugin_manager.lua#L14-L52)
 
 ## References
 
