@@ -14,3 +14,4 @@ Neovim configuration using Lazy as the plugin manager
 ## References
 
   - [Using Lua in NeoVim](https://github.com/nanotee/nvim-lua-guide)
+  - [NeoVim Lua Guide](https://neovim.io/doc/user/lua-guide.html#lua-guide)
