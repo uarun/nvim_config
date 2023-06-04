@@ -2,6 +2,7 @@ local o = vim.opt
 local g = vim.g
 
 g.loaded_perl_provider = 0  -- Turn off Perl plugins
+g.loaded_ruby_provider = 0  -- Turn off Ruby plugins
 
 -- Indentation
 o.smartindent = true
