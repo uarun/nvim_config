@@ -49,6 +49,8 @@ local plugins = {
     'hrsh7th/vim-vsnip',
   },
 
+  "lukas-reineke/indent-blankline.nvim",     -- Indentation guidelines
+
 }
 
 local opts = {}
