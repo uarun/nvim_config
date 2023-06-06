@@ -13,6 +13,9 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 
+  -- Full signature help, docs and completion for the nvim lua API
+  { "folke/neodev.nvim", lazy = true },
+
   -- Color Schemes
   "tanvirtin/monokai.nvim",
   "ellisonleao/gruvbox.nvim",
