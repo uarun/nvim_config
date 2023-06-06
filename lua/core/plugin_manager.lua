@@ -13,22 +13,22 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 
-  -- Full signature help, docs and completion for the nvim lua API
+  -- Full signature help, docs and completion for the nvim lua API --
   { "folke/neodev.nvim", lazy = true },
 
-  -- Color Schemes
+  -- Color Schemes --
   "tanvirtin/monokai.nvim",
   "ellisonleao/gruvbox.nvim",
 
-  -- File Explorer
+  -- File Explorer --
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
 
-  -- Git
+  -- Git --
   "lewis6991/gitsigns.nvim",
 
-  -- Syntax Highlighting
+  -- Syntax Highlighting --
   "nvim-treesitter/nvim-treesitter",
   {
     'nvim-telescope/telescope.nvim',
@@ -37,7 +37,7 @@ local plugins = {
   },
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 
-  -- LSP related plugins
+  -- LSP related plugins --
   {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
@@ -52,11 +52,18 @@ local plugins = {
     'hrsh7th/vim-vsnip',
   },
 
-  "lukas-reineke/indent-blankline.nvim",     -- Indentation guidelines
+  -- Scala Metals --
+  {
+    'scalameta/nvim-metals',
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "mfussenegger/nvim-dap",
+    }
+  },
 
+  "lukas-reineke/indent-blankline.nvim",     -- Indentation guidelines
 }
 
 local opts = {}
-
 require("lazy").setup(plugins, opts)
 
