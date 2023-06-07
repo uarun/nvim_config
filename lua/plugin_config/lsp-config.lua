@@ -25,6 +25,13 @@ if not lspconfig_ok then
   return
 end
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
+  capabilities = capabilities,
+})
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" })
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(_, bufnr)
@@ -93,15 +100,9 @@ cmp.setup.cmdline(':', {
 })
 
 require('neodev').setup({})
-
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
 for _, server in pairs(servers) do
-  lspconfig[server].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
+  lspconfig[server].setup { on_attach = on_attach }
 end
-
 
 -- Scala Metals Config --
 local lsp_group = api.nvim_create_augroup("lsp", { clear = true })
