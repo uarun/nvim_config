@@ -64,6 +64,9 @@ local plugins = {
     }
   },
 
+  -- Rust --
+  'simrat39/rust-tools.nvim',
+
   'folke/trouble.nvim',                      -- Summarize Issues
   'lukas-reineke/indent-blankline.nvim',     -- Indentation guidelines
   'numToStr/FTerm.nvim',                     -- Floating terminal
