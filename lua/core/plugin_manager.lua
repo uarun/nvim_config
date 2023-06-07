@@ -62,6 +62,7 @@ local plugins = {
   },
 
   "lukas-reineke/indent-blankline.nvim",     -- Indentation guidelines
+  'numToStr/FTerm.nvim',                     -- Floating terminal
 }
 
 local opts = {}
