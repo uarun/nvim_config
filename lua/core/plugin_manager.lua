@@ -13,6 +13,9 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 
+   -- Speed up loading Lua modules to improve startup time --
+  'lewis6991/impatient.nvim',
+
   -- Full signature help, docs and completion for the nvim lua API --
   { "folke/neodev.nvim", lazy = true },
 
