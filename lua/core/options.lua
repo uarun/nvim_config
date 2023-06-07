@@ -1,37 +1,44 @@
-local o = vim.opt
-local g = vim.g
+local opt = vim.opt
 
-g.loaded_perl_provider = 0  -- Turn off Perl plugins
-g.loaded_ruby_provider = 0  -- Turn off Ruby plugins
+vim.g.loaded_perl_provider = 0  -- Turn off Perl plugins
+vim.g.loaded_ruby_provider = 0  -- Turn off Ruby plugins
 
 -- Indentation
-o.smartindent = true
-o.tabstop = 2
-o.shiftwidth = 2
-o.expandtab = true
-o.scrolloff = 3
+opt.smartindent = true
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.scrolloff = 3
 
 -- Set clipboard to use system clipboard
-o.clipboard = "unnamedplus"
+opt.clipboard = "unnamedplus"
 
 -- Use Mouse
-o.mouse = "a"
+opt.mouse = "a"
 
 -- UI Settings
-o.cursorline = true
-o.relativenumber = true
-o.number = true
+opt.cursorline = true
+opt.relativenumber = true
+opt.number = true
 
 -- Misc
-o.ignorecase = true
-o.incsearch = true
-o.hlsearch = true
-o.wrap = false
-o.backup = false
-o.writebackup = false
-o.swapfile = false
-o.errorbells = false
+opt.ignorecase = true
+opt.incsearch = true
+opt.hlsearch = true
+opt.wrap = false
+opt.backup = false
+opt.writebackup = false
+opt.swapfile = false
+opt.errorbells = false
 
+-- Folds
+opt.foldmethod = "expr"
+opt.foldexpr   = "nvim_treesitter#foldexpr()"
+opt.foldenable = false
+
+-- Splits
+opt.splitright = true   -- Vertical split will place window to the right
+opt.splitbelow = true   -- Horizontal split will place window to the right
 
 -- Trailing Whitespaces Vacuum Cleaner
 function vim.fn.stripTrailingWhitespace()
