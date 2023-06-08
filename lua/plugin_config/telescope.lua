@@ -8,6 +8,7 @@ local opts = { noremap = true, silent = true }
 
 local builtin = require('telescope.builtin')
 
+keymap('n', '<C-f>',      builtin.find_files, opts)
 keymap('n', '<leader>ff', builtin.find_files, opts)
 keymap('n', '<leader>fg', builtin.live_grep, opts)
 keymap('n', '<leader>fb', builtin.buffers, opts)
