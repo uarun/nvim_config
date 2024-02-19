@@ -71,7 +71,7 @@ local plugins = {
   'simrat39/rust-tools.nvim',
 
   'folke/trouble.nvim',                      -- Summarize Issues
-  'lukas-reineke/indent-blankline.nvim',     -- Indentation guidelines
+  { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },     -- Indentation guidelines
   'numToStr/FTerm.nvim',                     -- Floating terminal
 }
 

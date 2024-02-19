@@ -30,7 +30,8 @@ lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_c
   capabilities = capabilities,
 })
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" })
+vim.lsp.handlers["textDocument/hover"]         = vim.lsp.with(vim.lsp.handlers.hover,          { border = 'rounded' })
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' })
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -98,7 +99,6 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
-
 
 require('neodev').setup({})
 for _, server in pairs(servers) do
@@ -243,4 +243,3 @@ api.nvim_create_autocmd("FileType", {
   end,
   group = nvim_metals_group,
 })
-

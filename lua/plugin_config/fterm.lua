@@ -14,4 +14,5 @@ fterm.setup({
 })
 
 vim.keymap.set('n', 't', '<CMD>lua require("FTerm").toggle()<CR>')
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')   -- <Esc> in terminal mode to Toggle terminal
+vim.keymap.set('t', '<C-v><Esc>', '<Esc>')                                          -- <Control-v><Esc> to send <Esc> to the terminal

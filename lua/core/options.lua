@@ -10,7 +10,7 @@ local options = {
     expandtab = true,          -- Enable the use of space in tab
     fileencoding = "utf-8",    -- File content encoding for the buffer
     fillchars = { eob = " " }, -- Disable `~` on nonexistent lines
-    foldcolumn = "1",          -- Show foldcolumn in nvim 0.9
+    foldcolumn = "auto",       -- Show foldcolumn in nvim 0.9
     foldenable = true,         -- Enable fold for nvim-ufo
     foldexpr   = "nvim_treesitter#foldexpr()",                 -- Fold expression to use
     foldlevel = 99,            -- Set high foldlevel for nvim-ufo
