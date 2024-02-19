@@ -29,14 +29,13 @@ end
 nvim_tree.setup {
   on_attach = nvim_tree_on_attach,
 
-  sort_by = "case_sensitive",
+  sort = {
+    sorter = "case_sensitive",
+  },
   view = {
     width = 30,
-    mappings = {
-      custom_only = false,
-    }
   },
   filters = {
     dotfiles = true,
-  }
+  },
 }
